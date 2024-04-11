@@ -1,5 +1,9 @@
-const coolGreeting = () => {
-};
+const coolGreeting = (person) => {
+  if (person.isCool)
+    return `What is UP ${person.name.toUpperCase()}? How you been doin'?`
+  else
+    return `Greetings ${person.name}, how have you been lately?`
+}
 
 const haveBirthday = () => {
 };
