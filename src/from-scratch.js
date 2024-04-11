@@ -25,7 +25,10 @@ const weAreNotFriends = (person) => {
   return newName;
 };
 
-const listHobbies = () => {
+const listHobbies = (person) => {
+  for(let hobby in person.hobbies) {
+    console.log(`${person.name} likes ${person.hobbies[hobby]}.`);
+  }
 };
 
 const getNextOpponent = () => {
