@@ -44,7 +44,14 @@ const listAllValues = (obj) => {
   return Object.values(obj);
 };
 
-const convertToMatrix = () => {
+const convertToMatrix = (arr) => {
+  if(arr[0] === undefined || arr[0] === null) return [];
+  const totalArr = [];
+  totalArr.push(Object.keys(arr[0]));
+  for(let e in arr) {
+    totalArr.push(Object.values(arr[e]));
+  }
+  return totalArr;
 };
 
 module.exports = {
