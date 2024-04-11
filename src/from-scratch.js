@@ -15,11 +15,14 @@ const becomeSecretAgent = (person, spyHandle) => {
 };
 
 const carMaker = (name, maker, year) => {
-  let car = {name:name, year:year, maker:maker, needsOilChange:false};
+  let car = { name: name, year: year, maker: maker, needsOilChange: false };
   return car;
 };
 
-const weAreNotFriends = () => {
+const weAreNotFriends = (person) => {
+  let newName = person.friends[person.friends.length - 1]
+  person.friends.splice(person.friends.length - 1, 1)
+  return newName;
 };
 
 const listHobbies = () => {
