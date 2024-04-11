@@ -26,12 +26,14 @@ const weAreNotFriends = (person) => {
 };
 
 const listHobbies = (person) => {
-  for(let hobby in person.hobbies) {
+  for (let hobby in person.hobbies) {
     console.log(`${person.name} likes ${person.hobbies[hobby]}.`);
   }
 };
 
-const getNextOpponent = () => {
+const getNextOpponent = (team) => {
+  if (team.matches[0] === undefined) return null
+  return team.matches[0].teamName;
 };
 
 const listAllKeys = () => {
