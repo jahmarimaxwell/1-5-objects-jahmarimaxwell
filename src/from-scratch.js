@@ -36,7 +36,8 @@ const getNextOpponent = (team) => {
   return team.matches[0].teamName;
 };
 
-const listAllKeys = () => {
+const listAllKeys = (obj) => {
+  return Object.keys(obj);
 };
 
 const listAllValues = () => {
